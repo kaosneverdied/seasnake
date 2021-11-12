@@ -3,10 +3,10 @@ Python wrapper for OpenSea's free API. the module turns .json data into python o
 
 **This is a work in progress**
 
-## How to use:
+## How to Setup in your porject:
 Add `seasnake.py` to your project folder and import it into the file you want to acces it from with `from seasnake import *`. It is also advsed that you import they typing library to assist with code prompting
 
-**Important:** seasnake has utilises logging to aid with devleopment and debugging. in whichever file you imported sea snake also import logging by adding `import logging` then add the following code: 
+**Important:** seasnake has utilises logging to aid with devleopment and debugging. In whichever file you imported seasnake also import logging by adding `import logging` then add the following code: 
 
 ```python
 
@@ -46,8 +46,9 @@ This object may then use the following methods to retireve data from openSea. Th
 The following creates an opensea object which is then used to get a Collection object named 'official':
 ```python
 opensea = Opensea()
-offical_collection = opensea.get_collection_single(collection_slug='offical')
+offical_collection = opensea.get_collection_single(collection_slug='official')
 ```
+Once the object has been retrieved it can be accessed via the class variables. A complete list of these is given below for each object class. 
 
 ### Classes:
 * Asset
@@ -191,3 +192,15 @@ offical_collection = opensea.get_collection_single(collection_slug='offical')
     * market_cap -> float
     * floor_price -> float
 
+The following example illustrates how to will retireve a single Asset and access some of its attributes
+ 
+```python
+asset_contract_address = "0x06012c8cf97bead5deae237070f9587f8e7a266d"
+token_id = "1"
+opensea = OpenSea()
+asset = opensea.get_asset_single(asset_contract_address=asset_contract_address, token_id=token_id)
+print(f'id: {asset.id}')
+print(f'token_id: {asset.token_id}')
+print(f'background_color: {asset.background_color}')
+print(f'img_url: {asset.image_url}')
+```
