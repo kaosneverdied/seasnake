@@ -3,10 +3,10 @@ Python wrapper for OpenSea's free API. the module turns .json data into python o
 
 **This is a work in progress**
 
-## How to Setup in your porject:
-Add `seasnake.py` to your project folder and import it into the file you want to acces it from with `from seasnake import *`. It is also advsed that you import they typing library to assist with code prompting
+## How to Setup in your project:
+Add `seasnake.py` to your project folder and import it into the file you want to acces it from with `from seasnake import *`. It is also advised that you import they typing library to assist with code prompting
 
-**Important:** seasnake has utilises logging to aid with devleopment and debugging. In whichever file you imported seasnake also import logging by adding `import logging` then add the following code: 
+**Important:** seasnake utilises logging to aid with devleopment and debugging. In whichever file you imported seasnake also import logging by adding `import logging` then add the following code: 
 
 ```python
 
@@ -26,11 +26,11 @@ logger.addHandler(file_handler)
 ```
 
 ## Methods and Classes
-Importing seasnake gives you access to object based interface for the OpenSea Free API. An opensea object may be creaed as follows:  
+Importing seasnake gives you access to an object based interface for the OpenSea Free API. An opensea object may be created as follows:  
 `opensea = OpenSea()`
 
 ### Methods
-This object may then use the following methods to retireve data from openSea. The data is rendered into Object form for ease of handling. Current methods implimented are given below with their return types.   
+This object may then use the following methods to retrieve data from OpenSea. The data is rendered into Object form for ease of handling. Current methods implimented are given below with their return types.   
 * `get_assets() -> List[Asset]`
 * `get_events() -> List[Event]`
 * `get_collections() -> List[Collection]`
