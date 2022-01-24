@@ -192,7 +192,7 @@ Once the object has been retrieved it can be accessed via the class variables. A
     * market_cap -> float
     * floor_price -> float
 
-The following example illustrates how to will retireve a single Asset and access some of its attributes
+The following example illustrates how to will retireve a single asset and access some of its attributes
  
 ```python
 asset_contract_address = "0x06012c8cf97bead5deae237070f9587f8e7a266d"
